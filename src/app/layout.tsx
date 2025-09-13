@@ -17,13 +17,26 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Khavish World - Premium Travel Experiences",
   description: "Discover the world with Khavish World. Luxury travel packages, premium accommodations, and unforgettable experiences across the globe.",
-  keywords: "travel, luxury, premium, vacation, destinations, packages, booking",
+  keywords: "travel, luxury, premium, vacation, destinations, packages, booking, Khavish World",
   authors: [{ name: "Khavish World" }],
   openGraph: {
     title: "Khavish World - Premium Travel Experiences",
     description: "Discover the world with Khavish World. Luxury travel packages, premium accommodations, and unforgettable experiences across the globe.",
     type: "website",
     locale: "en_US",
+    images: [
+      {
+        url: "/logokhavishtravel.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Khavish World Logo",
+      },
+    ],
+  },
+  icons: {
+    icon: "/logokhavishtravel.jpeg",
+    shortcut: "/logokhavishtravel.jpeg",
+    apple: "/logokhavishtravel.jpeg",
   },
 };
 

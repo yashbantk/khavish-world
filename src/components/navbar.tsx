@@ -37,9 +37,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
-            <div className="p-2 bg-primary rounded-lg group-hover:scale-110 transition-transform duration-300">
-              <Plane className="h-6 w-6 text-white" />
+          <Link href="/" className="flex items-center space-x-3 group">
+            <div className="group-hover:scale-110 transition-transform duration-300">
+              <img 
+                src="/logokhavishtravel.jpeg" 
+                alt="Khavish World Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <span className="text-2xl font-heading font-bold text-gradient">
               Khavish World

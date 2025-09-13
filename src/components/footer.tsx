@@ -33,10 +33,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="p-2 bg-primary rounded-lg">
-                <Plane className="h-6 w-6 text-white" />
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/logokhavishtravel.jpeg" 
+                alt="Khavish World Logo" 
+                className="h-12 w-auto"
+              />
               <span className="text-2xl font-heading font-bold text-gradient">
                 Khavish World
               </span>
