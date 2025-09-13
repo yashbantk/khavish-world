@@ -4,7 +4,7 @@ import Layout from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Award, Users, Globe, Heart, Target, Eye, Users2, Star } from "lucide-react";
+import { Users, Globe, Heart, Target, Eye } from "lucide-react";
 
 const values = [
   {
@@ -101,13 +101,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2008, Khavish World began as a small team of passionate travelers who believed that every journey should be extraordinary. What started as a dream to share the world's most beautiful destinations has grown into a premier luxury travel company.
+                  Founded in 2008, Khavish World began as a small team of passionate travelers who believed that every journey should be extraordinary. What started as a dream to share the world&apos;s most beautiful destinations has grown into a premier luxury travel company.
                 </p>
                 <p>
-                  Our name "Khavish" means "desire" in several languages, reflecting our commitment to fulfilling your deepest travel desires. We understand that travel is not just about visiting places—it's about experiencing cultures, creating connections, and discovering yourself.
+                  Our name &quot;Khavish&quot; means &quot;desire&quot; in several languages, reflecting our commitment to fulfilling your deepest travel desires. We understand that travel is not just about visiting places—it&apos;s about experiencing cultures, creating connections, and discovering yourself.
                 </p>
                 <p>
-                  Today, we're proud to have helped over 50,000 travelers discover the world, creating memories that last a lifetime. Our team of expert curators, local guides, and travel specialists work tirelessly to ensure every journey exceeds expectations.
+                  Today, we&apos;re proud to have helped over 50,000 travelers discover the world, creating memories that last a lifetime. Our team of expert curators, local guides, and travel specialists work tirelessly to ensure every journey exceeds expectations.
                 </p>
               </div>
             </motion.div>
@@ -212,7 +212,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  To inspire and enable extraordinary travel experiences that connect people with the world's most beautiful destinations, cultures, and communities.
+                  To inspire and enable extraordinary travel experiences that connect people with the world&apos;s most beautiful destinations, cultures, and communities.
                 </p>
                 <p>
                   We believe that travel has the power to transform lives, broaden perspectives, and create lasting memories. Our mission is to make these transformative experiences accessible to everyone, while maintaining the highest standards of luxury and service.

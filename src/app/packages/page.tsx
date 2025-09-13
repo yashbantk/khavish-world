@@ -119,7 +119,7 @@ const packages = [
   },
 ];
 
-const categories = ["All", "Cultural", "Beach", "Adventure", "Luxury"];
+// const categories = ["All", "Cultural", "Beach", "Adventure", "Luxury"];
 
 export default function PackagesPage() {
   return (
@@ -317,7 +317,7 @@ export default function PackagesPage() {
             className="text-center"
           >
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
-              Can't Find What You're Looking For?
+              Can&apos;t Find What You&apos;re Looking For?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
               Our travel experts can create a custom package tailored to your specific needs and preferences.

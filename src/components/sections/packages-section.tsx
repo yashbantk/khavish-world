@@ -149,7 +149,7 @@ export default function PackagesSection() {
 
                     {/* Features */}
                     <div className="space-y-2">
-                      <h4 className="font-medium text-gray-900 text-sm">What's Included:</h4>
+                      <h4 className="font-medium text-gray-900 text-sm">What&apos;s Included:</h4>
                       <div className="flex flex-wrap gap-2">
                         {pkg.features.map((feature, idx) => (
                           <Badge key={idx} variant="secondary" className="text-xs">

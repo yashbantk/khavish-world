@@ -4,7 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 
 const destinations = [
@@ -80,7 +79,7 @@ export default function FeaturedDestinations() {
             Featured Destinations
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
-            Discover our handpicked selection of the world's most captivating destinations, each offering unique experiences and unforgettable memories.
+            Discover our handpicked selection of the world&apos;s most captivating destinations, each offering unique experiences and unforgettable memories.
           </p>
         </motion.div>
 

@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { motion } from "framer-motion";
-import { Phone, Mail, MessageCircle, MapPin, Clock, Send, Calendar, Users } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Clock, Send } from "lucide-react";
 
 const contactMethods = [
   {
@@ -372,7 +372,7 @@ export default function ContactPage() {
                     Our Global Offices
                   </h4>
                   <div className="space-y-4">
-                    {offices.map((office, index) => (
+                    {offices.map((office) => (
                       <div key={office.city} className="border-b border-gray-100 pb-4 last:border-b-0 last:pb-0">
                         <h5 className="font-semibold text-gray-900 mb-2">{office.city}</h5>
                         <div className="space-y-1 text-sm text-gray-600">

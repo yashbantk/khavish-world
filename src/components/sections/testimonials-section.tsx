@@ -77,7 +77,7 @@ export default function TestimonialsSection() {
             What Our Travelers Say
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
-            Don't just take our word for it. Here's what our satisfied customers have to say about their Khavish World experiences.
+            Don&apos;t just take our word for it. Here&apos;s what our satisfied customers have to say about their Khavish World experiences.
           </p>
         </motion.div>
 
