@@ -137,7 +137,7 @@ export default function DestinationsPage() {
               <span className="block text-gradient">Destinations</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 font-body">
-              Explore our handpicked collection of the world's most captivating destinations, each offering unique experiences and unforgettable memories.
+              Explore our handpicked collection of the world&apos;s most captivating destinations, each offering unique experiences and unforgettable memories.
             </p>
           </motion.div>
 

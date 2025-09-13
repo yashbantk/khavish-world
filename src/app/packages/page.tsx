@@ -86,7 +86,7 @@ const packages = [
     title: "African Safari",
     subtitle: "12 Days of Wildlife",
     image: "/api/placeholder/400/300",
-    description: "Embark on an unforgettable safari adventure through Kenya and Tanzania's most famous national parks.",
+    description: "Embark on an unforgettable safari adventure through Kenya and Tanzania&apos;s most famous national parks.",
     price: 11999,
     originalPrice: 13999,
     rating: 4.9,
@@ -104,7 +104,7 @@ const packages = [
     title: "Mediterranean Cruise",
     subtitle: "10 Days of Coastal Beauty",
     image: "/api/placeholder/400/300",
-    description: "Sail through the Mediterranean's most beautiful ports with luxury accommodations and gourmet dining.",
+    description: "Sail through the Mediterranean&apos;s most beautiful ports with luxury accommodations and gourmet dining.",
     price: 9999,
     originalPrice: 11999,
     rating: 4.7,
@@ -253,7 +253,7 @@ export default function PackagesPage() {
 
                           {/* Features */}
                           <div className="space-y-2">
-                            <h4 className="font-medium text-gray-900 text-sm">What's Included:</h4>
+                            <h4 className="font-medium text-gray-900 text-sm">What&apos;s Included:</h4>
                             <div className="grid grid-cols-2 gap-1">
                               {pkg.features.slice(0, 4).map((feature, idx) => (
                                 <div key={idx} className="flex items-center space-x-2 text-sm text-gray-600">

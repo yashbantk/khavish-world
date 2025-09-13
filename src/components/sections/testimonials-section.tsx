@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
 
                     {/* Testimonial Text */}
                     <p className="text-gray-700 leading-relaxed italic">
-                      "{testimonial.text}"
+                      &ldquo;{testimonial.text}&rdquo;
                     </p>
 
                     {/* Trip Reference */}
