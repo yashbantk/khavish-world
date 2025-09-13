@@ -38,14 +38,15 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
-            <div className="group-hover:scale-110 transition-transform duration-300">
+            <div className="group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
               <img 
-                src="/logokhavishtravel.jpeg" 
+                src="/logokhavishtravel-removebg-preview.png" 
                 alt="Khavish World Logo" 
-                className="h-12 w-auto"
+                className="h-10 sm:h-12 w-auto object-contain"
+                style={{ maxWidth: '100px', height: 'auto' }}
               />
             </div>
-            <span className="text-2xl font-heading font-bold text-gradient">
+            <span className="text-xl sm:text-2xl font-heading font-bold text-gradient">
               Khavish World
             </span>
           </Link>

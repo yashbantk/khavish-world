@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/logokhavishtravel.jpeg",
+        url: "/logokhavishtravel-removebg-preview.png",
         width: 1200,
         height: 630,
         alt: "Khavish World Logo",
@@ -34,9 +34,9 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: "/logokhavishtravel.jpeg",
-    shortcut: "/logokhavishtravel.jpeg",
-    apple: "/logokhavishtravel.jpeg",
+    icon: "/logokhavishtravel-removebg-preview.png",
+    shortcut: "/logokhavishtravel-removebg-preview.png",
+    apple: "/logokhavishtravel-removebg-preview.png",
   },
 };
 

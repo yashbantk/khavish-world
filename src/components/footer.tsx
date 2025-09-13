@@ -35,11 +35,12 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <img 
-                src="/logokhavishtravel.jpeg" 
+                src="/logokhavishtravel-removebg-preview.png" 
                 alt="Khavish World Logo" 
-                className="h-12 w-auto"
+                className="h-10 sm:h-12 w-auto object-contain flex-shrink-0"
+                style={{ maxWidth: '100px', height: 'auto' }}
               />
-              <span className="text-2xl font-heading font-bold text-gradient">
+              <span className="text-xl sm:text-2xl font-heading font-bold text-gradient">
                 Khavish World
               </span>
             </div>
