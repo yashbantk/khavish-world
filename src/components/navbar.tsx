@@ -9,15 +9,24 @@ import { Menu, X, Plane } from "lucide-react";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      const currentScrollY = window.scrollY;
+      setIsScrolled(currentScrollY > 10);
+      
+      // Prevent navbar from hiding on mobile when swiping up
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setLastScrollY(currentScrollY);
+      } else {
+        setLastScrollY(currentScrollY);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const navItems = [
     { name: "Destinations", href: "/destinations" },
@@ -34,19 +43,19 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3 group">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 lg:h-20 min-h-[64px]">
+          {/* Logo - Mobile Optimized */}
+          <Link href="/" className="flex items-center space-x-2 sm:space-x-3 group flex-1 min-w-0">
             <div className="group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
               <img 
                 src="/logokhavishtravel-removebg-preview.png" 
                 alt="Khavish World Logo" 
-                className="h-10 sm:h-12 w-auto object-contain"
-                style={{ maxWidth: '100px', height: 'auto' }}
+                className="h-8 sm:h-10 lg:h-12 w-auto object-contain"
+                style={{ maxWidth: '60px', height: 'auto' }}
               />
             </div>
-            <span className="text-xl sm:text-2xl font-heading font-bold text-gradient">
+            <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-heading font-bold text-gradient text-center flex-1">
               Khavish World
             </span>
           </Link>
@@ -81,17 +90,17 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex-shrink-0 ml-2">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2"
+              className="p-2 h-10 w-10"
             >
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
+                <X className="h-5 w-5" />
               ) : (
-                <Menu className="h-6 w-6" />
+                <Menu className="h-5 w-5" />
               )}
             </Button>
           </div>
@@ -100,18 +109,18 @@ export default function Navbar() {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white rounded-lg shadow-lg mt-2 border border-gray-100">
+            <div className="px-3 pt-3 pb-4 space-y-1 bg-white rounded-lg shadow-lg mt-2 border border-gray-100 mx-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
+                  className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="pt-4">
+              <div className="pt-3">
                 <Button className="gold-button w-full" asChild>
                   <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                     Book Now
