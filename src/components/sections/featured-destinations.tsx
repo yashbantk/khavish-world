@@ -1,10 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Star } from "lucide-react";
 import Link from "next/link";
+import QuoteModal from "@/components/quote-modal";
 
 const destinations = [
   {
@@ -12,58 +14,66 @@ const destinations = [
     name: "Paris, France",
     image: "/api/placeholder/400/300",
     description: "The City of Light awaits with its romantic charm and cultural treasures.",
-    price: "From $2,499",
     rating: 4.9,
     duration: "7 Days",
+    slug: "paris-france",
   },
   {
     id: 2,
     name: "Tokyo, Japan",
     image: "/api/placeholder/400/300",
     description: "Experience the perfect blend of tradition and modernity in Japan's capital.",
-    price: "From $3,299",
     rating: 4.8,
     duration: "10 Days",
+    slug: "tokyo-japan",
   },
   {
     id: 3,
     name: "Dubai, UAE",
     image: "/api/placeholder/400/300",
     description: "Luxury and opulence meet in this dazzling desert metropolis.",
-    price: "From $1,899",
     rating: 4.7,
     duration: "5 Days",
+    slug: "dubai-uae",
   },
   {
     id: 4,
     name: "Maldives",
     image: "/api/placeholder/400/300",
     description: "Paradise on earth with crystal-clear waters and pristine beaches.",
-    price: "From $4,599",
     rating: 4.9,
     duration: "8 Days",
+    slug: "maldives",
   },
   {
     id: 5,
     name: "Switzerland",
     image: "/api/placeholder/400/300",
     description: "Alpine beauty and charming cities in the heart of Europe.",
-    price: "From $3,799",
     rating: 4.8,
     duration: "9 Days",
+    slug: "switzerland",
   },
   {
     id: 6,
     name: "Santorini, Greece",
     image: "/api/placeholder/400/300",
     description: "Stunning sunsets and white-washed buildings on this Greek island.",
-    price: "From $2,199",
     rating: 4.9,
     duration: "6 Days",
+    slug: "santorini-greece",
   },
 ];
 
 export default function FeaturedDestinations() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedDestination, setSelectedDestination] = useState<string>("");
+
+  const handleGetQuote = (destinationName: string) => {
+    setSelectedDestination(destinationName);
+    setIsModalOpen(true);
+  };
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,15 +133,21 @@ export default function FeaturedDestinations() {
                       </p>
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-2xl font-bold text-primary">{destination.price}</p>
-                        <p className="text-sm text-gray-500">per person</p>
-                      </div>
-                      <Button className="gold-button group-hover:scale-105 transition-transform duration-300" asChild>
-                        <Link href={`/destinations?destination=${destination.name.toLowerCase().replace(/\s+/g, '-')}`}>
-                          Explore
-                          <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <div className="space-y-3">
+                      <Button 
+                        onClick={() => handleGetQuote(destination.name)}
+                        className="w-full gold-button group-hover:scale-105 transition-transform duration-300 py-3 text-lg font-semibold"
+                      >
+                        Get Quote
+                        <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                      <Button 
+                        asChild
+                        variant="outline"
+                        className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 py-3"
+                      >
+                        <Link href={`/destinations/${destination.slug}`}>
+                          View Details
                         </Link>
                       </Button>
                     </div>
@@ -158,6 +174,12 @@ export default function FeaturedDestinations() {
           </Button>
         </motion.div>
       </div>
+      
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        destination={selectedDestination}
+      />
     </section>
   );
 }

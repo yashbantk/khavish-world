@@ -141,31 +141,6 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        {/* Overall Rating */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <div className="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
-            <div className="space-y-4">
-              <div className="text-6xl font-bold text-primary">4.9</div>
-              <div className="flex justify-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-6 w-6 text-yellow-500 fill-current" />
-                ))}
-              </div>
-              <div className="text-gray-600">
-                Based on <span className="font-semibold text-primary">2,847 reviews</span> from verified travelers
-              </div>
-              <div className="text-sm text-gray-500">
-                Trusted by thousands of satisfied customers worldwide
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

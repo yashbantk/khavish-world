@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Layout from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -7,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Star, Clock, Users, MapPin, ArrowRight, Check } from "lucide-react";
+import Link from "next/link";
+import QuoteModal from "@/components/quote-modal";
 
 const packages = [
   {
@@ -122,6 +125,14 @@ const packages = [
 // const categories = ["All", "Cultural", "Beach", "Adventure", "Luxury"];
 
 export default function PackagesPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string>("");
+
+  const handleGetQuote = (packageName: string) => {
+    setSelectedPackage(packageName);
+    setIsModalOpen(true);
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -269,30 +280,23 @@ export default function PackagesPage() {
                             </div>
                           </div>
 
-                          {/* Pricing */}
-                          <div className="pt-4 border-t border-gray-100">
-                            <div className="flex items-center justify-between mb-4">
-                              <div>
-                                <div className="flex items-center space-x-2">
-                                  <span className="text-3xl font-bold text-primary">
-                                    ${pkg.price.toLocaleString()}
-                                  </span>
-                                  <span className="text-lg text-gray-500 line-through">
-                                    ${pkg.originalPrice.toLocaleString()}
-                                  </span>
-                                </div>
-                                <p className="text-sm text-gray-500">per person</p>
-                              </div>
-                              <div className="text-right">
-                                <div className="text-sm text-green-600 font-medium">
-                                  Save ${(pkg.originalPrice - pkg.price).toLocaleString()}
-                                </div>
-                              </div>
-                            </div>
-
-                            <Button className="w-full gold-button group-hover:scale-105 transition-transform duration-300">
-                              Book Now
-                              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          {/* Action Buttons */}
+                          <div className="pt-4 border-t border-gray-100 space-y-3">
+                            <Button 
+                              onClick={() => handleGetQuote(pkg.title)}
+                              className="w-full gold-button group-hover:scale-105 transition-transform duration-300 py-3 text-lg font-semibold"
+                            >
+                              Get Quote
+                              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                            <Button 
+                              asChild
+                              variant="outline"
+                              className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 py-3"
+                            >
+                              <Link href={`/packages/${pkg.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                                View Details
+                              </Link>
                             </Button>
                           </div>
                         </div>
@@ -333,6 +337,12 @@ export default function PackagesPage() {
           </motion.div>
         </div>
       </section>
+      
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        packageName={selectedPackage}
+      />
     </Layout>
   );
 }

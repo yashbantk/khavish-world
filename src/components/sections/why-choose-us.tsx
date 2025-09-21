@@ -95,12 +95,12 @@ export default function WhyChooseUs() {
                 <div className="text-gray-600 font-medium">Destinations</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">15+</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">7+</div>
                 <div className="text-gray-600 font-medium">Years Experience</div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">4.9</div>
-                <div className="text-gray-600 font-medium">Average Rating</div>
+                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">24/7</div>
+                <div className="text-gray-600 font-medium">Support</div>
               </div>
             </div>
           </div>

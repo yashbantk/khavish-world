@@ -1,0 +1,27 @@
+{
+  "name": "Khavish World - Premium Travel Experiences",
+  "short_name": "Khavish World",
+  "description": "Discover the world with Khavish World. Luxury travel packages, premium accommodations, and unforgettable experiences across the globe.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logokhavishtravel-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logokhavishtravel-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "lifestyle", "business"],
+  "lang": "en",
+  "dir": "ltr"
+}

@@ -15,7 +15,7 @@ const contactMethods = [
     icon: Phone,
     title: "Call Us",
     description: "Speak directly with our travel experts",
-    details: "+1 (555) 123-4567",
+    details: "+91 9958879754",
     subDetails: "24/7 Support Available",
     action: "Call Now",
   },
@@ -23,7 +23,7 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     description: "Send us your travel requirements",
-    details: "info@khavishworld.com",
+    details: "Worldkhavish@gmail.com",
     subDetails: "Response within 24 hours",
     action: "Send Email",
   },
@@ -31,7 +31,7 @@ const contactMethods = [
     icon: MessageCircle,
     title: "WhatsApp",
     description: "Chat with us instantly",
-    details: "+1 (555) 123-4567",
+    details: "+91 9958879754",
     subDetails: "Instant messaging support",
     action: "Start Chat",
   },
@@ -39,7 +39,7 @@ const contactMethods = [
     icon: MapPin,
     title: "Visit Us",
     description: "Come to our office",
-    details: "123 Travel Street, City, Country",
+    details: "K1/72A New Palam Vihar Phase 1, Sector 110, Gurgaon - 122017",
     subDetails: "Mon-Fri: 9AM-6PM",
     action: "Get Directions",
   },
@@ -47,25 +47,11 @@ const contactMethods = [
 
 const offices = [
   {
-    city: "New York",
-    address: "123 Travel Street, New York, NY 10001",
-    phone: "+1 (555) 123-4567",
-    email: "ny@khavishworld.com",
-    hours: "Mon-Fri: 9AM-6PM EST",
-  },
-  {
-    city: "London",
-    address: "456 Travel Lane, London, UK SW1A 1AA",
-    phone: "+44 20 7123 4567",
-    email: "london@khavishworld.com",
-    hours: "Mon-Fri: 9AM-6PM GMT",
-  },
-  {
-    city: "Dubai",
-    address: "789 Travel Boulevard, Dubai, UAE",
-    phone: "+971 4 123 4567",
-    email: "dubai@khavishworld.com",
-    hours: "Sun-Thu: 9AM-6PM GST",
+    city: "Gurgaon",
+    address: "K1/72A New Palam Vihar Phase 1, Sector 110, Gurgaon - 122017",
+    phone: "+91 9958879754",
+    email: "Worldkhavish@gmail.com",
+    hours: "Mon-Fri: 9AM-6PM IST",
   },
 ];
 
@@ -311,14 +297,14 @@ export default function ContactPage() {
                     <div className="flex items-center space-x-3">
                       <Phone className="h-5 w-5 text-primary" />
                       <div>
-                        <div className="font-medium text-gray-900">+1 (555) 123-4567</div>
+                        <div className="font-medium text-gray-900">+91 9958879754</div>
                         <div className="text-sm text-gray-500">24/7 Support</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="h-5 w-5 text-primary" />
                       <div>
-                        <div className="font-medium text-gray-900">info@khavishworld.com</div>
+                        <div className="font-medium text-gray-900">Worldkhavish@gmail.com</div>
                         <div className="text-sm text-gray-500">General Inquiries</div>
                       </div>
                     </div>

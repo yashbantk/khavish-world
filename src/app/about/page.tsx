@@ -10,57 +10,75 @@ const values = [
   {
     icon: Heart,
     title: "Passion for Travel",
-    description: "We believe travel has the power to transform lives and create lasting memories that enrich the soul.",
+    description: "Every journey is uniquely yours. We don&apos;t believe in one-size-fits-all travel. Whether you&apos;re chasing sunsets or exploring ancient temples, we craft experiences that speak to your heart.",
   },
   {
     icon: Target,
     title: "Excellence in Service",
-    description: "We strive for perfection in every detail, ensuring our clients receive nothing but the best.",
+    description: "From the moment you dream about your next adventure to the day you return home with memories, we handle every detail. Consider it all taken care of.",
   },
   {
     icon: Globe,
     title: "Cultural Respect",
-    description: "We promote responsible tourism that respects local cultures and contributes to sustainable travel.",
+    description: "Our network of passionate travel experts and local guides ensures you don&apos;t just visit a destination — you truly experience it. From hidden gems to exclusive access.",
   },
   {
     icon: Users,
     title: "Personal Touch",
-    description: "Every journey is tailored to individual preferences, creating truly personalized experiences.",
+    description: "We open doors that others can't. From flights and accommodations to tours and insurance — we make travel seamless and extraordinary.",
   },
 ];
 
 const team = [
   {
-    name: "Sarah Johnson",
+    name: "Bindiya Juneja",
     role: "Founder & CEO",
     image: "/api/placeholder/200/200",
-    bio: "With over 15 years in luxury travel, Sarah founded Khavish World to create extraordinary journeys that inspire and delight.",
+    bio: "With over 7 years in luxury travel, Bindiya founded Khavish World to create extraordinary journeys that inspire and delight.",
   },
   {
-    name: "Michael Chen",
+    name: "Vaibhav Juneja",
     role: "Head of Operations",
     image: "/api/placeholder/200/200",
-    bio: "Michael ensures every detail of your journey is flawlessly executed, from planning to execution.",
+    bio: "Vaibhav ensures every detail of your journey is flawlessly executed, from planning to execution.",
   },
   {
-    name: "Emily Rodriguez",
+    name: "Ishan Kalra",
     role: "Travel Curator",
     image: "/api/placeholder/200/200",
-    bio: "Emily handpicks the most exceptional destinations and experiences to create unforgettable memories.",
+    bio: "Ishan handpicks the most exceptional destinations and experiences to create unforgettable memories.",
   },
   {
-    name: "David Thompson",
+    name: "Saksham Bhutani",
+    role: "Legal Advisor",
+    image: "/api/placeholder/200/200",
+    bio: "Saksham provides expert legal guidance ensuring all travel arrangements comply with international regulations and protect our clients' interests.",
+  },
+  {
+    name: "Himanshu Sharma",
     role: "Customer Experience",
     image: "/api/placeholder/200/200",
-    bio: "David leads our customer service team, ensuring every client feels valued and supported throughout their journey.",
+    bio: "Himanshu leads our customer service team, ensuring every client feels valued and supported throughout their journey.",
+  },
+  {
+    name: "Sahil",
+    role: "Marketing Lead",
+    image: "/api/placeholder/200/200",
+    bio: "Sahil drives our marketing initiatives, connecting travelers with their dream destinations through innovative campaigns.",
+  },
+  {
+    name: "Abhishek Yadav",
+    role: "Tech Lead",
+    image: "/api/placeholder/200/200",
+    bio: "Abhishek leads our technology initiatives, ensuring our digital platforms provide seamless experiences for our travelers.",
   },
 ];
 
 const stats = [
   { number: "50K+", label: "Happy Travelers" },
   { number: "100+", label: "Destinations" },
-  { number: "15+", label: "Years Experience" },
-  { number: "4.9", label: "Average Rating" },
+  { number: "7+", label: "Years Experience" },
+  { number: "24/7", label: "Support" },
 ];
 
 export default function AboutPage() {
@@ -80,7 +98,7 @@ export default function AboutPage() {
               <span className="block text-gradient">Khavish World</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto font-body">
-              We are passionate travel curators dedicated to creating extraordinary journeys that inspire, delight, and create lasting memories.
+              We believe that travel is the ultimate adventure of the soul — a journey that transforms not just your passport, but your perspective on life itself. We don&apos;t just plan trips; we architect experiences that become the stories you&apos;ll tell for a lifetime.
             </p>
           </motion.div>
         </div>
@@ -101,13 +119,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2008, Khavish World began as a small team of passionate travelers who believed that every journey should be extraordinary. What started as a dream to share the world&apos;s most beautiful destinations has grown into a premier luxury travel company.
+                  At Khavish World, we believe travel is more than just visiting new places — it&apos;s about creating unforgettable memories, discovering diverse cultures, and exploring the world with confidence and ease. As a full-service travel company, we specialize in crafting personalized travel experiences that cater to every type of traveler.
                 </p>
                 <p>
-                  Our name &quot;Khavish&quot; means &quot;desire&quot; in several languages, reflecting our commitment to fulfilling your deepest travel desires. We understand that travel is not just about visiting places—it&apos;s about experiencing cultures, creating connections, and discovering yourself.
+                  Our name &quot;Khavish&quot; means &quot;desire&quot; in several languages, reflecting our commitment to fulfilling your deepest travel desires. Whether you&apos;re seeking adventure, relaxation, cultural immersion, or luxury, we understand that every journey should be extraordinary.
                 </p>
                 <p>
-                  Today, we&apos;re proud to have helped over 50,000 travelers discover the world, creating memories that last a lifetime. Our team of expert curators, local guides, and travel specialists work tirelessly to ensure every journey exceeds expectations.
+                  With a dedicated team of travel experts, local guides, and global partners, we provide seamless planning and support for every step of your journey. From curated tour packages and custom itineraries to flight bookings, accommodations, and travel insurance, we handle all the details so you can focus on enjoying the trip of a lifetime.
                 </p>
               </div>
             </motion.div>
@@ -212,13 +230,13 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  To inspire and enable extraordinary travel experiences that connect people with the world&apos;s most beautiful destinations, cultures, and communities.
+                  <strong>Your Travel Dreams, Our Mission:</strong> Whether you&apos;re planning a solo getaway, a family vacation, a romantic honeymoon, or a corporate retreat, Khavish World is your trusted partner in travel. Let us turn your travel dreams into reality.
                 </p>
                 <p>
                   We believe that travel has the power to transform lives, broaden perspectives, and create lasting memories. Our mission is to make these transformative experiences accessible to everyone, while maintaining the highest standards of luxury and service.
                 </p>
                 <p>
-                  Through responsible tourism and sustainable practices, we aim to preserve the beauty of our destinations for future generations while creating meaningful connections between travelers and local communities.
+                  Through responsible tourism and sustainable practices, we aim to preserve the beauty of our destinations for future generations while creating meaningful connections between travelers and local communities. Because life is short, but the memories we create last forever.
                 </p>
               </div>
             </motion.div>

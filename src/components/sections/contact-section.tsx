@@ -204,7 +204,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Call Us</div>
-                    <div className="text-gray-600">+1 (555) 123-4567</div>
+                    <div className="text-gray-600">+91 9958879754</div>
                     <div className="text-sm text-gray-500">24/7 Support</div>
                   </div>
                 </div>
@@ -215,7 +215,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">Email Us</div>
-                    <div className="text-gray-600">info@khavishworld.com</div>
+                    <div className="text-gray-600">Worldkhavish@gmail.com</div>
                     <div className="text-sm text-gray-500">Response within 24h</div>
                   </div>
                 </div>
@@ -226,7 +226,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900">WhatsApp</div>
-                    <div className="text-gray-600">+1 (555) 123-4567</div>
+                    <div className="text-gray-600">+91 9958879754</div>
                     <div className="text-sm text-gray-500">Instant Chat</div>
                   </div>
                 </div>

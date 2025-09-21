@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Layout from "@/components/layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,6 +10,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
 import { Search, Filter, Star, MapPin, Clock, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import QuoteModal from "@/components/quote-modal";
 
 const destinations = [
   {
@@ -121,6 +124,14 @@ const categories = ["All", "Cultural", "Beach", "Luxury", "Adventure"];
 const continents = ["All", "Europe", "Asia", "North America", "Middle East"];
 
 export default function DestinationsPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedDestination, setSelectedDestination] = useState<string>("");
+
+  const handleGetQuote = (destinationName: string) => {
+    setSelectedDestination(destinationName);
+    setIsModalOpen(true);
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -307,14 +318,22 @@ export default function DestinationsPage() {
                             </div>
                           </div>
 
-                          <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                            <div>
-                              <p className="text-2xl font-bold text-primary">{destination.price}</p>
-                              <p className="text-sm text-gray-500">per person</p>
-                            </div>
-                            <Button className="gold-button group-hover:scale-105 transition-transform duration-300">
-                              Explore
-                              <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          <div className="pt-4 border-t border-gray-100 space-y-3">
+                            <Button 
+                              onClick={() => handleGetQuote(destination.name)}
+                              className="w-full gold-button group-hover:scale-105 transition-transform duration-300 py-3 text-lg font-semibold"
+                            >
+                              Get Quote
+                              <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                            </Button>
+                            <Button 
+                              asChild
+                              variant="outline"
+                              className="w-full border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300 py-3"
+                            >
+                              <Link href={`/destinations/${destination.name.toLowerCase().replace(/\s+/g, '-')}`}>
+                                View Details
+                              </Link>
                             </Button>
                           </div>
                         </div>
@@ -327,6 +346,12 @@ export default function DestinationsPage() {
           </Tabs>
         </div>
       </section>
+      
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        destination={selectedDestination}
+      />
     </Layout>
   );
 }

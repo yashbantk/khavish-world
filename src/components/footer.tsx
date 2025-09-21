@@ -1,10 +1,19 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Plane, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import QuoteModal from "@/components/quote-modal";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleGetQuote = () => {
+    setIsModalOpen(true);
+  };
 
   const quickLinks = [
     { name: "Destinations", href: "/destinations" },
@@ -23,7 +32,7 @@ export default function Footer() {
   const socialLinks = [
     { name: "Facebook", icon: Facebook, href: "#" },
     { name: "Twitter", icon: Twitter, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/khavishworld?igsh=dnRhN2trYnVpcHht" },
     { name: "LinkedIn", icon: Linkedin, href: "#" },
   ];
 
@@ -110,20 +119,23 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-gray-600 text-sm">+1 (555) 123-4567</span>
+                <span className="text-gray-600 text-sm">+91 9958879754</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-gray-600 text-sm">info@khavishworld.com</span>
+                <span className="text-gray-600 text-sm">Worldkhavish@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-primary" />
                 <span className="text-gray-600 text-sm">
-                  123 Travel Street, City, Country
+                  K1/72A New Palam Vihar Phase 1, Sector 110, Gurgaon - 122017
                 </span>
               </div>
             </div>
-            <Button className="gold-button w-full mt-4">
+            <Button 
+              onClick={handleGetQuote}
+              className="gold-button w-full mt-4"
+            >
               Get Quote
             </Button>
           </div>
@@ -148,6 +160,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      
+      <QuoteModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </footer>
   );
 }
