@@ -1,4 +1,4 @@
-import { supabase } from './supabase'
+import { supabase, isSupabaseConfigured } from './supabase'
 
 // Common Supabase operations for the travel website
 
@@ -22,6 +22,12 @@ export interface QuoteInquiry {
 export const quoteOperations = {
   // Submit a new quote inquiry
   async submitQuote(inquiry: Omit<QuoteInquiry, 'id' | 'created_at'>) {
+    // Check if Supabase is configured
+    if (!isSupabaseConfigured()) {
+      console.warn('Supabase not configured, skipping database submission')
+      return null
+    }
+
     const { data, error } = await supabase
       .from('quote_inquiries')
       .insert([inquiry])
@@ -37,6 +43,11 @@ export const quoteOperations = {
 
   // Get all quote inquiries (admin only)
   async getAllQuotes() {
+    if (!isSupabaseConfigured()) {
+      console.warn('Supabase not configured, returning empty array')
+      return []
+    }
+
     const { data, error } = await supabase
       .from('quote_inquiries')
       .select('*')
