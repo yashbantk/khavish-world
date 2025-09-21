@@ -12,7 +12,7 @@ const destinations = [
   {
     id: 1,
     name: "Paris, France",
-    image: "/api/placeholder/400/300",
+    image: "/images/paris-thumbnail.jpg",
     description: "The City of Light awaits with its romantic charm and cultural treasures.",
     rating: 4.9,
     duration: "7 Days",
@@ -21,7 +21,7 @@ const destinations = [
   {
     id: 2,
     name: "Tokyo, Japan",
-    image: "/api/placeholder/400/300",
+    image: "/images/japan-thumbnail.jpg",
     description: "Experience the perfect blend of tradition and modernity in Japan's capital.",
     rating: 4.8,
     duration: "10 Days",
@@ -30,7 +30,7 @@ const destinations = [
   {
     id: 3,
     name: "Dubai, UAE",
-    image: "/api/placeholder/400/300",
+    image: "/images/dubai-thumbnail.jpg",
     description: "Luxury and opulence meet in this dazzling desert metropolis.",
     rating: 4.7,
     duration: "5 Days",
@@ -39,7 +39,7 @@ const destinations = [
   {
     id: 4,
     name: "Maldives",
-    image: "/api/placeholder/400/300",
+    image: "/images/maldives-thumbnail.webp",
     description: "Paradise on earth with crystal-clear waters and pristine beaches.",
     rating: 4.9,
     duration: "8 Days",
@@ -47,21 +47,39 @@ const destinations = [
   },
   {
     id: 5,
-    name: "Switzerland",
-    image: "/api/placeholder/400/300",
-    description: "Alpine beauty and charming cities in the heart of Europe.",
+    name: "Swiss Alps",
+    image: "/images/swiss-alps-thumbnail.jpg",
+    description: "Breathtaking alpine beauty and charming mountain towns.",
     rating: 4.8,
-    duration: "9 Days",
-    slug: "switzerland",
+    duration: "8 Days",
+    slug: "swiss-alps",
   },
   {
     id: 6,
-    name: "Santorini, Greece",
-    image: "/api/placeholder/400/300",
-    description: "Stunning sunsets and white-washed buildings on this Greek island.",
+    name: "Bali, Indonesia",
+    image: "/images/bali-thumbnail.jpg",
+    description: "Tropical paradise with stunning beaches and rich culture.",
     rating: 4.9,
-    duration: "6 Days",
-    slug: "santorini-greece",
+    duration: "7 Days",
+    slug: "bali-indonesia",
+  },
+  {
+    id: 7,
+    name: "New York, USA",
+    image: "/images/usa-thumbnail.jpg",
+    description: "The city that never sleeps with iconic landmarks and vibrant energy.",
+    rating: 4.7,
+    duration: "5 Days",
+    slug: "new-york-usa",
+  },
+  {
+    id: 8,
+    name: "African Safari",
+    image: "/images/african-safari-thumbnail.jpg",
+    description: "Wildlife adventure in the heart of Africa's most beautiful landscapes.",
+    rating: 4.9,
+    duration: "10 Days",
+    slug: "african-safari",
   },
 ];
 
@@ -105,13 +123,13 @@ export default function FeaturedDestinations() {
             >
               <Card className="premium-card group overflow-hidden h-full">
                 <div className="relative overflow-hidden">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">✈️</span>
-                      </div>
-                      <p className="text-sm text-gray-500">Beautiful destination image</p>
-                    </div>
+                  <div className="aspect-[4/3] relative">
+                    <img 
+                      src={destination.image} 
+                      alt={destination.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">
                     <Star className="h-4 w-4 text-yellow-500 fill-current" />

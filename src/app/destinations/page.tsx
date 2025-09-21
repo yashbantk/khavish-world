@@ -18,7 +18,7 @@ const destinations = [
     id: 1,
     name: "Paris, France",
     continent: "Europe",
-    image: "/api/placeholder/400/300",
+    image: "/images/paris-thumbnail.jpg",
     description: "The City of Light awaits with its romantic charm, world-class cuisine, and iconic landmarks.",
     price: "From $2,499",
     rating: 4.9,
@@ -31,7 +31,7 @@ const destinations = [
     id: 2,
     name: "Tokyo, Japan",
     continent: "Asia",
-    image: "/api/placeholder/400/300",
+    image: "/images/japan-thumbnail.jpg",
     description: "Experience the perfect blend of tradition and modernity in Japan's vibrant capital.",
     price: "From $3,299",
     rating: 4.8,
@@ -44,7 +44,7 @@ const destinations = [
     id: 3,
     name: "Dubai, UAE",
     continent: "Middle East",
-    image: "/api/placeholder/400/300",
+    image: "/images/dubai-thumbnail.jpg",
     description: "Luxury and opulence meet in this dazzling desert metropolis with world-class attractions.",
     price: "From $1,899",
     rating: 4.7,
@@ -57,7 +57,7 @@ const destinations = [
     id: 4,
     name: "Maldives",
     continent: "Asia",
-    image: "/api/placeholder/400/300",
+    image: "/images/maldives-thumbnail.webp",
     description: "Paradise on earth with crystal-clear waters, pristine beaches, and overwater bungalows.",
     price: "From $4,599",
     rating: 4.9,
@@ -68,55 +68,55 @@ const destinations = [
   },
   {
     id: 5,
-    name: "Switzerland",
+    name: "Swiss Alps",
     continent: "Europe",
-    image: "/api/placeholder/400/300",
-    description: "Alpine beauty and charming cities in the heart of Europe with breathtaking landscapes.",
-    price: "From $3,799",
+    image: "/images/swiss-alps-thumbnail.jpg",
+    description: "Breathtaking alpine beauty and charming mountain towns in the heart of Switzerland.",
+    price: "From $3,999",
     rating: 4.8,
-    duration: "9 Days",
+    duration: "8 Days",
     bestTime: "Jun - Sep",
-    highlights: ["Matterhorn", "Lucerne", "Interlaken", "Swiss Alps"],
+    highlights: ["Matterhorn", "Zermatt", "Interlaken", "Jungfraujoch"],
     category: "Adventure",
   },
   {
     id: 6,
-    name: "Santorini, Greece",
-    continent: "Europe",
-    image: "/api/placeholder/400/300",
-    description: "Stunning sunsets and white-washed buildings on this iconic Greek island.",
-    price: "From $2,199",
+    name: "Bali, Indonesia",
+    continent: "Asia",
+    image: "/images/bali-thumbnail.jpg",
+    description: "Tropical paradise with stunning beaches, ancient temples, and rich cultural heritage.",
+    price: "From $1,899",
     rating: 4.9,
-    duration: "6 Days",
-    bestTime: "May - Oct",
-    highlights: ["Oia Sunset", "Fira Town", "Red Beach", "Wine Tasting"],
+    duration: "7 Days",
+    bestTime: "Apr - Oct",
+    highlights: ["Ubud Rice Terraces", "Tanah Lot Temple", "Seminyak Beach", "Mount Batur"],
     category: "Beach",
   },
   {
     id: 7,
     name: "New York, USA",
     continent: "North America",
-    image: "/api/placeholder/400/300",
-    description: "The city that never sleeps offers endless entertainment, culture, and iconic landmarks.",
+    image: "/images/usa-thumbnail.jpg",
+    description: "The city that never sleeps with iconic landmarks, world-class dining, and vibrant energy.",
     price: "From $2,999",
-    rating: 4.6,
-    duration: "7 Days",
+    rating: 4.7,
+    duration: "5 Days",
     bestTime: "Apr - Jun, Sep - Nov",
     highlights: ["Statue of Liberty", "Central Park", "Broadway", "Times Square"],
     category: "Cultural",
   },
   {
     id: 8,
-    name: "Bali, Indonesia",
-    continent: "Asia",
-    image: "/api/placeholder/400/300",
-    description: "Tropical paradise with rich culture, stunning temples, and beautiful beaches.",
-    price: "From $1,599",
-    rating: 4.8,
-    duration: "8 Days",
-    bestTime: "Apr - Oct",
-    highlights: ["Ubud Temples", "Tegallalang Rice Terraces", "Beach Clubs", "Volcano Tours"],
-    category: "Beach",
+    name: "African Safari",
+    continent: "Africa",
+    image: "/images/african-safari-thumbnail.jpg",
+    description: "Wildlife adventure in the heart of Africa's most beautiful and diverse landscapes.",
+    price: "From $4,999",
+    rating: 4.9,
+    duration: "10 Days",
+    bestTime: "Jun - Oct",
+    highlights: ["Big Five Safari", "Serengeti", "Ngorongoro Crater", "Maasai Culture"],
+    category: "Adventure",
   },
 ];
 
@@ -253,13 +253,13 @@ export default function DestinationsPage() {
                   >
                     <Card className="premium-card group overflow-hidden h-full">
                       <div className="relative overflow-hidden">
-                        <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                              <span className="text-2xl">✈️</span>
-                            </div>
-                            <p className="text-sm text-gray-500">Beautiful destination image</p>
-                          </div>
+                        <div className="aspect-[4/3] relative">
+                          <img 
+                            src={destination.image} 
+                            alt={destination.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
                         
                         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">

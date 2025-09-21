@@ -16,7 +16,7 @@ const packages = [
     id: 1,
     title: "European Grand Tour",
     subtitle: "14 Days of Luxury",
-    image: "/api/placeholder/400/300",
+    image: "/images/paris-thumbnail.jpg",
     description: "Experience the best of Europe with our premium 14-day tour covering Paris, Rome, Barcelona, and Amsterdam.",
     price: 8999,
     originalPrice: 10999,
@@ -34,7 +34,7 @@ const packages = [
     id: 2,
     title: "Asian Adventure",
     subtitle: "10 Days of Discovery",
-    image: "/api/placeholder/400/300",
+    image: "/images/japan-thumbnail.jpg",
     description: "Discover the vibrant cultures and stunning landscapes of Japan, Thailand, and Singapore.",
     price: 6999,
     originalPrice: 8499,
@@ -50,27 +50,27 @@ const packages = [
   },
   {
     id: 3,
-    title: "Caribbean Paradise",
-    subtitle: "7 Days of Relaxation",
-    image: "/api/placeholder/400/300",
-    description: "Unwind in the pristine beaches and crystal-clear waters of the Caribbean islands.",
-    price: 5499,
-    originalPrice: 6999,
+    title: "Mediterranean Cruise",
+    subtitle: "10 Days of Luxury",
+    image: "/images/mediterranean-cruise-thumbnail.jpg",
+    description: "Sail through the Mediterranean's most beautiful destinations on a luxury cruise ship.",
+    price: 7999,
+    originalPrice: 9999,
     rating: 4.9,
-    duration: "7 Days",
-    groupSize: "Max 8",
-    destinations: ["Barbados", "St. Lucia", "Antigua"],
-    features: ["Beachfront Villas", "Water Sports", "Sunset Cruises", "Spa Services", "Island Hopping", "Snorkeling"],
-    highlights: ["Pink Sand Beaches", "Volcanic Landscapes", "Historic Sites", "Coral Reefs"],
+    duration: "10 Days",
+    groupSize: "Max 12",
+    destinations: ["Santorini", "Mykonos", "Sicily", "Barcelona"],
+    features: ["Luxury Cruise Ship", "All Meals Included", "Shore Excursions", "Spa Services", "Entertainment", "WiFi"],
+    highlights: ["Stunning Mediterranean views", "Gourmet dining experiences", "Cultural shore excursions", "Luxury onboard amenities"],
     isPopular: true,
-    category: "Beach",
+    category: "Luxury",
     difficulty: "Easy",
   },
   {
     id: 4,
     title: "Swiss Alps Adventure",
     subtitle: "8 Days of Alpine Beauty",
-    image: "/api/placeholder/400/300",
+    image: "/images/swiss-alps-thumbnail.jpg",
     description: "Experience the breathtaking beauty of the Swiss Alps with luxury accommodations and outdoor activities.",
     price: 7999,
     originalPrice: 9499,
@@ -88,7 +88,7 @@ const packages = [
     id: 5,
     title: "African Safari",
     subtitle: "12 Days of Wildlife",
-    image: "/api/placeholder/400/300",
+    image: "/images/african-safari-thumbnail.jpg",
     description: "Embark on an unforgettable safari adventure through Kenya and Tanzania&apos;s most famous national parks.",
     price: 11999,
     originalPrice: 13999,
@@ -106,7 +106,7 @@ const packages = [
     id: 6,
     title: "Mediterranean Cruise",
     subtitle: "10 Days of Coastal Beauty",
-    image: "/api/placeholder/400/300",
+    image: "/images/mediterranean-cruise-thumbnail.jpg",
     description: "Sail through the Mediterranean&apos;s most beautiful ports with luxury accommodations and gourmet dining.",
     price: 9999,
     originalPrice: 11999,
@@ -118,6 +118,42 @@ const packages = [
     highlights: ["Sagrada Familia", "Monaco Casino", "Uffizi Gallery", "Oia Sunset"],
     isPopular: false,
     category: "Luxury",
+    difficulty: "Easy",
+  },
+  {
+    id: 7,
+    title: "Bali Paradise",
+    subtitle: "7 Days of Tropical Bliss",
+    image: "/images/bali-thumbnail.jpg",
+    description: "Discover the magic of Bali with its stunning beaches, ancient temples, and vibrant culture.",
+    price: 2999,
+    originalPrice: 3999,
+    rating: 4.9,
+    duration: "7 Days",
+    groupSize: "Max 10",
+    destinations: ["Ubud", "Seminyak", "Canggu", "Nusa Penida"],
+    features: ["Luxury Villas", "Temple Tours", "Beach Activities", "Spa Treatments", "Cultural Experiences", "Rice Terrace Visits"],
+    highlights: ["Tanah Lot Temple", "Ubud Rice Terraces", "Seminyak Beach", "Mount Batur Sunrise"],
+    isPopular: true,
+    category: "Beach",
+    difficulty: "Easy",
+  },
+  {
+    id: 8,
+    title: "New York City Explorer",
+    subtitle: "5 Days of Urban Adventure",
+    image: "/images/usa-thumbnail.jpg",
+    description: "Experience the energy and excitement of the Big Apple with iconic landmarks and world-class attractions.",
+    price: 3999,
+    originalPrice: 4999,
+    rating: 4.7,
+    duration: "5 Days",
+    groupSize: "Max 12",
+    destinations: ["Manhattan", "Brooklyn", "Queens", "Staten Island"],
+    features: ["City Tours", "Broadway Shows", "Museum Visits", "Fine Dining", "Shopping", "Skyline Views"],
+    highlights: ["Statue of Liberty", "Central Park", "Times Square", "Brooklyn Bridge"],
+    isPopular: false,
+    category: "Cultural",
     difficulty: "Easy",
   },
 ];
@@ -188,13 +224,13 @@ export default function PackagesPage() {
                     
                     <Card className="premium-card group overflow-hidden h-full">
                       <div className="relative overflow-hidden">
-                        <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                          <div className="text-center">
-                            <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                              <span className="text-3xl">🌍</span>
-                            </div>
-                            <p className="text-sm text-gray-500">Stunning package image</p>
-                          </div>
+                        <div className="aspect-[4/3] relative">
+                          <img 
+                            src={pkg.image} 
+                            alt={pkg.title}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                         </div>
                         
                         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 flex items-center space-x-1">

@@ -14,7 +14,7 @@ const packages = [
     id: 1,
     title: "7-Day Japan Discovery Tour",
     subtitle: "Tokyo, Fuji, Kyoto, Osaka",
-    image: "/api/placeholder/400/300",
+    image: "/images/japan-thumbnail.jpg",
     description: "Explore the best of Japan in this immersive 7-day journey across Tokyo, Mt. Fuji, Kyoto, Nara, and Osaka.",
     duration: "7 Days",
     groupSize: "Small Group",
@@ -27,7 +27,7 @@ const packages = [
     id: 2,
     title: "European Grand Tour",
     subtitle: "14 Days of Luxury",
-    image: "/api/placeholder/400/300",
+    image: "/images/paris-thumbnail.jpg",
     description: "Experience the best of Europe with our premium 14-day tour covering Paris, Rome, Barcelona, and Amsterdam.",
     duration: "14 Days",
     groupSize: "Max 12",
@@ -38,16 +38,16 @@ const packages = [
   },
   {
     id: 3,
-    title: "Caribbean Paradise",
-    subtitle: "7 Days of Relaxation",
-    image: "/api/placeholder/400/300",
-    description: "Unwind in the pristine beaches and crystal-clear waters of the Caribbean islands.",
-    duration: "7 Days",
-    groupSize: "Max 8",
-    destinations: ["Barbados", "St. Lucia", "Antigua"],
-    features: ["Beachfront Villas", "Water Sports", "Sunset Cruises", "Spa Services"],
+    title: "Mediterranean Cruise",
+    subtitle: "10 Days of Luxury",
+    image: "/images/mediterranean-cruise-thumbnail.jpg",
+    description: "Sail through the Mediterranean's most beautiful destinations on a luxury cruise.",
+    duration: "10 Days",
+    groupSize: "Max 12",
+    destinations: ["Santorini", "Mykonos", "Sicily", "Barcelona"],
+    features: ["Luxury Cruise Ship", "All Meals Included", "Shore Excursions", "Spa Services"],
     isPopular: true,
-    slug: "caribbean-paradise",
+    slug: "mediterranean-cruise",
   },
 ];
 
@@ -100,13 +100,13 @@ export default function PackagesSection() {
               
               <Card className="premium-card group overflow-hidden h-full">
                 <div className="relative overflow-hidden">
-                  <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-3xl">🌍</span>
-                      </div>
-                      <p className="text-sm text-gray-500">Stunning package image</p>
-                    </div>
+                  <div className="aspect-[4/3] relative">
+                    <img 
+                      src={pkg.image} 
+                      alt={pkg.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                   
                 </div>
