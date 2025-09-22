@@ -107,3 +107,7 @@ If you get any errors:
 2. Check that you copied the SQL exactly as shown
 3. Try running just the first table creation SQL first
 4. Check the Supabase logs for any permission issues
+
+
+
+

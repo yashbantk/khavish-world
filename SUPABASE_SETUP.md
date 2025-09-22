@@ -47,3 +47,7 @@ If you still get errors:
 2. Verify your Supabase project URL and API key in `.env.local`
 3. Make sure Row Level Security policies are enabled
 4. Check the Supabase logs for any permission issues
+
+
+
+

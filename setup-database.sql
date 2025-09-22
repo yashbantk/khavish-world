@@ -140,3 +140,7 @@ INSERT INTO public.testimonials (name, location, text, trip, rating, is_featured
 ('Sarah Johnson', 'New York, USA', 'Khavish World exceeded all our expectations! The European Grand Tour was absolutely magical. Every detail was perfectly planned, and our guide was exceptional. We can''t wait to book our next adventure with them.', 'European Grand Tour', 5, true, 1),
 ('Michael Chen', 'San Francisco, USA', 'The level of service and attention to detail is unmatched. Our Asian Adventure was flawless from start to finish. The luxury accommodations and cultural experiences were beyond our wildest dreams.', 'Asian Adventure', 5, true, 2),
 ('Emily Rodriguez', 'Miami, USA', 'Khavish World made our honeymoon absolutely perfect. The Caribbean Paradise package was everything we hoped for and more. The private beachfront villa and sunset cruises were unforgettable.', 'Caribbean Paradise', 5, true, 3);
+
+
+
+

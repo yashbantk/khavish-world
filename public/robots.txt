@@ -6,3 +6,4 @@ Sitemap: https://khavishworld.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
+

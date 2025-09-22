@@ -14,3 +14,7 @@ CREATE POLICY "Enable insert for all users" ON public.quote_inquiries
 --     FOR ALL 
 --     USING (true) 
 --     WITH CHECK (true);
+
+
+
+

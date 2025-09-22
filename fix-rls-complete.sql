@@ -29,3 +29,7 @@ GRANT ALL ON public.quote_inquiries TO anon;
 GRANT ALL ON public.quote_inquiries TO authenticated;
 GRANT USAGE ON SCHEMA public TO anon;
 GRANT USAGE ON SCHEMA public TO authenticated;
+
+
+
+

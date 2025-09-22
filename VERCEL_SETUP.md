@@ -42,3 +42,7 @@ If you want to deploy without Supabase for now:
 - The app will still work
 - Quote forms will log data to console
 - You can add Supabase later
+
+
+
+
